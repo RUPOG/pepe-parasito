@@ -1,7 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1754609389
+::res://::1754864945
+agujero.tscn::PackedScene::7361851516745326295::1754864870::0::1::::<><><>0<>0<><>::uid://c2e3nvknbhs6x::::res://assets/Sprite-0001.png<>uid://b0iwg8fpjs6ek::::res://test_line2D.tscn
+character.gd::GDScript::-1::1754863294::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character.tscn::PackedScene::3118578568581724875::1754864870::0::1::::<><><>0<>0<><>::uid://cf3a6anr7x3jb::::res://icon.svg<>res://character.gd<>uid://dc5evbpjpshr0::::res://agujero.tscn
 icon.svg::CompressedTexture2D/CompressedTexture2D::5181643543199648571::1754609109::1754609109::1::::<><><>0<>0<>9b13f0e79c0c1922f4920e9e03308569<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-prueba.txt::TextFile/TextFile::-1::1754609109::0::1::::<><><>0<>0<><>::
 README.md::TextFile/TextFile::-1::1754609109::0::1::::<><><>0<>0<><>::
-::res://assets/::1754609406
-Sprite-0001.png::CompressedTexture2D::6677922066778231269::1754609406::1754609406::1::::<><><>0<>0<>38b7953527b99e375b538229cfbb8e02<>res://.godot/imported/Sprite-0001.png-301f2c522e57282b7df856433eb0ee72.ctex::
+test_line2D.tscn::PackedScene::4159005026969559118::1754864870::0::1::::<><><>0<>0<><>::uid://dvfuo03vxx8ia::::res://test_line2D.gd<>uid://c2e3nvknbhs6x::::res://assets/Sprite-0001.png<>uid://cf3a6anr7x3jb::::res://icon.svg
+test_line2D.gd::GDScript::8644790354542379228::1754864789::0::1::::<>Node2D<><>0<>0<><>::
+::res://assets/::1754864945
+bicho_arrastrandose.png::CompressedTexture2D::5318710532226223229::1754864945::1754864964::1::::<><><>0<>0<>928a4540abf5e7ac4b0c60307d8155d2<>res://.godot/imported/bicho_arrastrandose.png-5ea29f2605e1eb60bd702d6f858a00d6.ctex::
+bicho_quieto.png::CompressedTexture2D::5485478633107021346::1754864945::1754864964::1::::<><><>0<>0<>3e3eef65f8304f7b88e9cdeebfcc1639<>res://.godot/imported/bicho_quieto.png-9e84e8433477313ae3b415613d67855e.ctex::
+Sprite-0001.png::CompressedTexture2D/CompressedTexture2D::6677922066778231269::1754609406::1754609406::1::::<><><>0<>0<>38b7953527b99e375b538229cfbb8e02<>res://.godot/imported/Sprite-0001.png-301f2c522e57282b7df856433eb0ee72.ctex::

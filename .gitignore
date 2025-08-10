@@ -1,3 +1,24 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Archivos de configuración específicos de cada PC
+*.cfg
+
+# Escenas y scripts importados automáticamente (Godot los puede regenerar)
+*.import
+
+# Carpetas de importación (contienen assets convertidos por Godot)
+.import/
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de editores de texto
+*.swp
+*.tmp
+
+# Archivos de compilación si usan export templates o builds
+export_presets.cfg
+bin/
