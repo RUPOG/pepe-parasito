@@ -1,7 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1754609389
+::res://::1754855660
+character.gd::GDScript::8127505708544083533::1754712840::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character.tscn::PackedScene::2443351705197050679::1754712840::0::1::::<><><>0<>0<><>::uid://cf3a6anr7x3jb::::res://icon.svg<>uid://dn2a3jkjkxxdt::::res://character.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::5181643543199648571::1754609109::1754609109::1::::<><><>0<>0<>9b13f0e79c0c1922f4920e9e03308569<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 prueba.txt::TextFile/TextFile::-1::1754609109::0::1::::<><><>0<>0<><>::
 README.md::TextFile/TextFile::-1::1754609109::0::1::::<><><>0<>0<><>::
 ::res://assets/::1754609406
-Sprite-0001.png::CompressedTexture2D::6677922066778231269::1754609406::1754609406::1::::<><><>0<>0<>38b7953527b99e375b538229cfbb8e02<>res://.godot/imported/Sprite-0001.png-301f2c522e57282b7df856433eb0ee72.ctex::
+Sprite-0001.png::CompressedTexture2D/CompressedTexture2D::6677922066778231269::1754609406::1754609406::1::::<><><>0<>0<>38b7953527b99e375b538229cfbb8e02<>res://.godot/imported/Sprite-0001.png-301f2c522e57282b7df856433eb0ee72.ctex::

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkowseusjyn1t"]
+
+[ext_resource type="Texture2D" uid="uid://cf3a6anr7x3jb" path="res://icon.svg" id="1_glpr6"]
+[ext_resource type="Script" path="res://character.gd" id="1_pjt0s"]
+[ext_resource type="PackedScene" uid="uid://dc5evbpjpshr0" path="res://agujero.tscn" id="3_wa5vi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjt0s"]
+size = Vector2(121, 124)
+
+[node name="Character" type="CharacterBody2D"]
+position = Vector2(246, 147)
+script = ExtResource("1_pjt0s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_pjt0s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_glpr6")
+
+[node name="Area2D" parent="." instance=ExtResource("3_wa5vi")]
+position = Vector2(-41, -39)
+
+[node name="Area2D2" parent="." instance=ExtResource("3_wa5vi")]
+position = Vector2(-15, 4)
+
+[node name="Area2D3" parent="." instance=ExtResource("3_wa5vi")]
+position = Vector2(38, -23)
+
+[node name="Area2D4" parent="." instance=ExtResource("3_wa5vi")]
+position = Vector2(39, 44)
