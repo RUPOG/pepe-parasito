@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var line_2d: Line2D = $Line2D
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _ready() -> void:
 	self.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
@@ -15,7 +16,7 @@ func _process(delta: float) -> void:
 		#posicion deseada o al máximo(máximo se consigue con area2D.)
 		#el incremento utiliza await y lambda
 		line_2d.clear_points()
-		var temp_pos: Vector2 = position
-		position = get_local_mouse_position()
-		line_2d.add_point(temp_pos - position)
-		line_2d.add_point(temp_pos)
+		var base_pos: Vector2 = position #el 0,0
+		sprite_2d.position = get_local_mouse_position()
+		line_2d.add_point(sprite_2d.position - base_pos)
+		line_2d.add_point(base_pos)
