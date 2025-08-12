@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbcvee45pjhco"]
+
+[ext_resource type="Script" uid="uid://bhlk4mkphmomw" path="res://Scripts/disparo.gd" id="1_8niyp"]
+[ext_resource type="Texture2D" uid="uid://ooswvjfa2py7" path="res://assets/prota/gusanos.png" id="1_gnjys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8niyp"]
+size = Vector2(30, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cci5"]
+atlas = ExtResource("1_gnjys")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7db56"]
+atlas = ExtResource("1_gnjys")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocwu6"]
+atlas = ExtResource("1_gnjys")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mou24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cci5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7db56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocwu6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Disparo" type="Area2D"]
+script = ExtResource("1_8niyp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_8niyp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_mou24")
+autoplay = "default"
+
+[node name="tiempo" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="timeout" from="tiempo" to="." method="_on_tiempo_timeout"]
