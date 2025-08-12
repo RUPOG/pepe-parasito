@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg0xi5takbyfo"]
+
+[ext_resource type="Script" uid="uid://pm35gl24meb7" path="res://Scripts/personaje.gd" id="1_48aib"]
+[ext_resource type="PackedScene" uid="uid://beitnlkrqjxen" path="res://Escenas/character.tscn" id="1_s7vd6"]
+
+[node name="Personaje" type="Node2D"]
+script = ExtResource("1_48aib")
+
+[node name="Character" parent="." instance=ExtResource("1_s7vd6")]
+position = Vector2(403, 120)
+
+[node name="gusano_der" type="Marker2D" parent="Character"]
+position = Vector2(-21, 1)
+
+[node name="gusano_iz" type="Marker2D" parent="Character"]
+position = Vector2(25, 3)
+rotation = 3.14159
