@@ -16,7 +16,11 @@ func _process(delta: float) -> void:
 		#posicion deseada o al máximo(máximo se consigue con area2D.)
 		#el incremento utiliza await y lambda
 		line_2d.clear_points()
-		var base_pos: Vector2 = position #el 0,0
+		var base_pos: Vector2 = Vector2(0,0)
 		sprite_2d.position = get_local_mouse_position()
-		line_2d.add_point(sprite_2d.position - base_pos)
 		line_2d.add_point(base_pos)
+		line_2d.add_point(get_local_mouse_position() - base_pos)
+	else:
+		sprite_2d.position = sprite_2d.position.move_toward(Vector2.ZERO, 5.0)
+		line_2d.remove_point(line_2d.get_point_count()-1)
+		line_2d.add_point(sprite_2d.position )
