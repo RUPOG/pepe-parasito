@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://cimf5xkr7kbkn"]
+[gd_scene load_steps=8 format=4 uid="uid://cimf5xkr7kbkn"]
 
 [ext_resource type="Texture2D" uid="uid://dmg5wtwpks8x8" path="res://assets/Tile.png" id="1_c4fwp"]
 [ext_resource type="PackedScene" uid="uid://cg0xi5takbyfo" path="res://Escenas/Personaje.tscn" id="2_wghqs"]
 [ext_resource type="PackedScene" uid="uid://gyixiabikirr" path="res://Escenas/globuloB.tscn" id="3_sgo8e"]
 [ext_resource type="PackedScene" uid="uid://gsblkm3ftrd0" path="res://Escenas/GlobulosR.tscn" id="4_5gfnq"]
+[ext_resource type="PackedScene" uid="uid://cqukdodtgwd8q" path="res://Escenas/dash-sangre.tscn" id="5_5gfnq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxxan"]
 texture = ExtResource("1_c4fwp")
@@ -50,3 +51,6 @@ scale = Vector2(1.5, 1.5)
 
 [node name="GlobulosR3" parent="." instance=ExtResource("4_5gfnq")]
 position = Vector2(1298, 524)
+
+[node name="Node2D" parent="." instance=ExtResource("5_5gfnq")]
+position = Vector2(2001, 1527)
