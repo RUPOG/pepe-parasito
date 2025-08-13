@@ -1,19 +1,19 @@
 [gd_scene load_steps=120 format=3 uid="uid://beitnlkrqjxen"]
 
 [ext_resource type="Script" uid="uid://dn2a3jkjkxxdt" path="res://Scripts/character.gd" id="1_pjt0s"]
-[ext_resource type="Texture2D" uid="uid://baav8iqs45n47" path="res://assets/prota/mancha_sangre.png" id="2_c1b4b"]
-[ext_resource type="Texture2D" uid="uid://cqpcrnhen1p70" path="res://assets/prota/bicho_quieto-BIZ.png" id="2_qi5as"]
-[ext_resource type="Texture2D" uid="uid://8i1arvl7mu1r" path="res://assets/prota/bicho_arrastrandos-BI.png" id="2_yxww1"]
-[ext_resource type="Texture2D" uid="uid://btvs41fr3kelo" path="res://assets/prota/bicho_giro-Iz.png" id="3_qi5as"]
-[ext_resource type="Texture2D" uid="uid://d14d7l8xco7vl" path="res://assets/prota/bicho_arrastrandos-BDe.png" id="3_wdpcj"]
-[ext_resource type="Texture2D" uid="uid://b8m1smpufqlct" path="res://assets/prota/bicho_quieto-BD.png" id="4_jb3kq"]
-[ext_resource type="Texture2D" uid="uid://bd4fkjliiv74f" path="res://assets/prota/bicho_quieto-C.png" id="6_c1b4b"]
-[ext_resource type="Texture2D" uid="uid://5abfpv6faogp" path="res://assets/prota/bicho_giro-D.png" id="6_jb3kq"]
-[ext_resource type="Texture2D" uid="uid://xynhk4bu8kqj" path="res://assets/prota/bicho_arrastrandos-C.png" id="7_qi5as"]
-[ext_resource type="Texture2D" uid="uid://b8exelwikn34v" path="res://assets/prota/bicho_boca.png" id="10_jb3kq"]
+[ext_resource type="Texture2D" uid="uid://ciuga1gvb7mfn" path="res://assets/prota/mancha_sangre.png" id="2_c1b4b"]
+[ext_resource type="Texture2D" uid="uid://b4pcfph2tq664" path="res://assets/prota/bicho_quieto-BIZ.png" id="2_qi5as"]
+[ext_resource type="Texture2D" uid="uid://bspxdgix231aw" path="res://assets/prota/bicho_arrastrandos-BI.png" id="2_yxww1"]
+[ext_resource type="Texture2D" uid="uid://d3py8pimupsx" path="res://assets/prota/bicho_giro-Iz.png" id="3_qi5as"]
+[ext_resource type="Texture2D" uid="uid://cp38dasxsjowl" path="res://assets/prota/bicho_arrastrandos-BDe.png" id="3_wdpcj"]
+[ext_resource type="Texture2D" uid="uid://y77t8g3fcbud" path="res://assets/prota/bicho_quieto-BD.png" id="4_jb3kq"]
+[ext_resource type="Texture2D" uid="uid://wvrrc7duqe65" path="res://assets/prota/bicho_quieto-C.png" id="6_c1b4b"]
+[ext_resource type="Texture2D" uid="uid://c7enu80ivt1y8" path="res://assets/prota/bicho_giro-D.png" id="6_jb3kq"]
+[ext_resource type="Texture2D" uid="uid://ck0ldtdjlrma5" path="res://assets/prota/bicho_arrastrandos-C.png" id="7_qi5as"]
+[ext_resource type="Texture2D" uid="uid://bh4u16dqa25hb" path="res://assets/prota/bicho_boca.png" id="10_jb3kq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjt0s"]
-size = Vector2(121, 124)
+size = Vector2(92, 88)
 
 [sub_resource type="Curve" id="Curve_c1b4b"]
 _data = [Vector2(0, 0.617978), 0.0, 0.0, 0, 0, Vector2(0.661765, 0.606742), -3.29127, -3.29127, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -817,7 +817,7 @@ animations = [{
 script = ExtResource("1_pjt0s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -17)
+position = Vector2(1, -13)
 shape = SubResource("RectangleShape2D_pjt0s")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
