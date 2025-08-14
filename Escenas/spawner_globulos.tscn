@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cju6unuxgjont"]
+
+[ext_resource type="Script" uid="uid://dhtcfmsi06skm" path="res://Scripts/spawner_globulos_b.gd" id="1_pivd2"]
+[ext_resource type="PackedScene" uid="uid://gsblkm3ftrd0" path="res://Escenas/GlobulosR.tscn" id="2_pivd2"]
+[ext_resource type="Texture2D" uid="uid://brdf0kq0wi41o" path="res://assets/escenario/mancha_sangre-piso.png" id="3_5dull"]
+
+[node name="SpawnerGlobulos" type="Marker2D"]
+script = ExtResource("1_pivd2")
+escena_globulo = ExtResource("2_pivd2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.246261, 5.45201e-05, 0.256961, 1)
+texture = ExtResource("3_5dull")
+
+[node name="Timer" type="Timer" parent="."]

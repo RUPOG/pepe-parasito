@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://gyixiabikirr"]
+[gd_scene load_steps=27 format=3 uid="uid://gyixiabikirr"]
 
-[ext_resource type="Texture2D" uid="uid://bb0xxf6d6s2hp" path="res://assets/globuloB/globuloBlanco_acido.png" id="1_q1o1q"]
-[ext_resource type="Texture2D" uid="uid://bgf2h71py125v" path="res://assets/globuloB/globuloBlanco_C.png" id="2_n73q6"]
-[ext_resource type="Texture2D" uid="uid://b1t87yqqh0qi6" path="res://assets/globuloB/globuloBlanco_come.png" id="3_vmw7m"]
+[ext_resource type="Script" uid="uid://m8ekqw80154r" path="res://Scripts/globulo_b.gd" id="1_n73q6"]
+[ext_resource type="Texture2D" uid="uid://cd8h0dbogcffg" path="res://assets/globuloB/globuloBlanco_acido.png" id="1_q1o1q"]
+[ext_resource type="Texture2D" uid="uid://cc3pgc82rffui" path="res://assets/globuloB/globuloBlanco_C.png" id="2_n73q6"]
+[ext_resource type="Texture2D" uid="uid://cn7vwi1ivl2ea" path="res://assets/globuloB/globuloBlanco_come.png" id="3_vmw7m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q1o1q"]
 radius = 44.5028
@@ -166,6 +167,7 @@ animations = [{
 }]
 
 [node name="GlobuloB" type="CharacterBody2D"]
+script = ExtResource("1_n73q6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -0.5)

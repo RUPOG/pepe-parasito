@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://gsblkm3ftrd0"]
+[gd_scene load_steps=9 format=3 uid="uid://gsblkm3ftrd0"]
 
-[ext_resource type="Texture2D" uid="uid://d386r1o6m1cro" path="res://assets/globuloR/GlobuloRojo_C.png" id="1_ci087"]
+[ext_resource type="Texture2D" uid="uid://bkjmr5qv2km62" path="res://assets/globuloR/GlobuloRojo_C.png" id="1_ci087"]
+[ext_resource type="Script" uid="uid://b5pbxpo0rf7dy" path="res://Scripts/globulos_r.gd" id="1_grric"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ci087"]
 radius = 47.5237
@@ -34,14 +35,31 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfqpn"]
+radius = 200.0
+
 [node name="GlobulosR" type="CharacterBody2D"]
+script = ExtResource("1_grric")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.5, -0.5)
 shape = SubResource("CircleShape2D_ci087")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vuh8a")
 autoplay = "default"
 frame = 2
 frame_progress = 0.207247
+
+[node name="RangoEscape" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangoEscape"]
+shape = SubResource("CircleShape2D_pfqpn")
+
+[node name="TimerDireccion" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="RangoEscape" to="." method="_on_rango_escape_body_entered"]
+[connection signal="body_exited" from="RangoEscape" to="." method="_on_rango_escape_body_exited"]

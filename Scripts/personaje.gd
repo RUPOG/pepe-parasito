@@ -2,9 +2,9 @@ extends Node2D
 
 
 @export var bala: PackedScene = preload("res://Escenas/disparo.tscn")
+@onready var character: CharacterBody2D = $Character
 
 func _process(delta) -> void: 
-	
 	if Input.is_action_just_pressed("disparoDerecho"):
 		disparar(true)
 		
