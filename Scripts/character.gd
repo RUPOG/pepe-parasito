@@ -16,7 +16,10 @@ var giro_iz: bool = false
 var sangre: float = 0.5 
 
 var area_mause = false
+var dash: bool = false
 
+func _ready():
+	$m_sangre.amount_ratio = 0
 
 func _process(delta) -> void: 
 	
@@ -46,7 +49,7 @@ func _process(delta) -> void:
 
 # ---------------| INICIO: SEGUIMIENTO |--------------#
 
-	var pos_mouse = get_global_mouse_position()
+	#var pos_mouse = get_global_mouse_position()
 	#var base = abs(pos_mouse.x-$piboteB.global_position.x)
 	#var altura = abs(pos_mouse.y-$piboteB.global_position.y)
 	#var distancia = sqrt(base**2 + altura**2)
@@ -55,8 +58,8 @@ func _process(delta) -> void:
 	#var pos_mouse_local = $piboteB.to_local(pos_mouse_global)  # posición local al nodo pivoteB
 	#print("Mouse local:", pos_mouse_local)
 	
-	if area_mause:
-		$piboteB.look_at(pos_mouse)
+	#if area_mause:
+		#$piboteB.look_at(pos_mouse)
 
 	#print($limiteB.global_position.x)
 	
@@ -67,11 +70,11 @@ func _process(delta) -> void:
 	
 # ---------------| FIN: SEGUIMIENTO |--------------#
 
-	if Input.is_action_just_pressed("lengua"):
-		$piboteB/boca.play("disparo")
-
-	if Input.is_action_just_released("lengua"):
-		$piboteB/boca.play("default")
+	#if Input.is_action_just_pressed("lengua"):
+		#$piboteB/boca.play("disparo")
+#
+	#if Input.is_action_just_released("lengua"):
+		#$piboteB/boca.play("default")
 
 func _physics_process(delta: float) -> void:
 	
@@ -103,22 +106,18 @@ func _physics_process(delta: float) -> void:
 		#print(rotation_speed)
 
 	
-	if Input.is_action_pressed("SPACE"):
-		#Tiene que hacer un boost que haga que se mueva rápido en una dirección
-		$dash.start()
-		max_speed = 600
-		#print(max_speed)
+	if dash:
 		velocity += input_vector.rotated(rotation) * 15
 	
 	if input_vector.y != 0:#Esto hace que vaya desacelerando de a poco en incremento de 3.
-		if sangre < 1:
-			sangre += 0.04
+		if sangre < 0.08:
+			sangre += 0.01
 		
 		animated_sprite_2d.play("walk")
 		brazo_Derecho.play("giro") if giro_iz else brazo_Derecho.play("walk")
 		brazo_izquierdo.play("giro") if giro_d else brazo_izquierdo.play("walk")
-		$GPUParticles2D.speed_scale = 1.0
-		$GPUParticles2D.modulate = Color(1,1,1,sangre)
+		$agua.speed_scale = 1.0
+		$agua.modulate = Color(1,1,1,sangre)
 		
 	else:
 		
@@ -126,15 +125,15 @@ func _physics_process(delta: float) -> void:
 		brazo_Derecho.play("giro") if giro_iz else brazo_Derecho.play("default")
 		brazo_izquierdo.play("giro") if giro_d else brazo_izquierdo.play("default")
 		velocity = velocity.move_toward(Vector2.ZERO, 3) #aca decia 30
-		$GPUParticles2D.speed_scale = 0.0
+		$agua.speed_scale = 0.0
 		
 		if sangre > 0:
-			sangre -= 0.04
+			sangre -= 0.01
 		else:
-			$GPUParticles2D.restart() 
-		$GPUParticles2D.modulate = Color(1,1,1,sangre)
+			$agua.restart() 
+		$agua.modulate = Color(1,1,1,sangre)
 	
-
+	print(max_speed)
 		
 	move_and_slide()
 
@@ -144,14 +143,22 @@ func _on_rotacion_timeout() -> void: # timer para que tarde un toque en arrancar
 
 
 func _on_dash_timeout() -> void: #timer para cambiar el maximo de velocidad al "pisar" charco de sangre (por ahora apretar barra)
-	var max_speed = 250.0
+	max_speed = 250.0
+	dash = false
+	$m_sangre.amount_ratio = 0
 	#print(max_speed)
  
+func recibir_dash_sangre():
+		$dash.start()
+		#$m_sangre.modulate = Color(1,1,1,1)
+		$m_sangre.amount_ratio = 20
+		dash = true
+		max_speed = 600
 
 
-func _on_area_2d_mouse_entered() -> void:
-	area_mause = true
-
-
-func _on_area_2d_mouse_exited() -> void:
-	area_mause = false
+#func _on_area_2d_mouse_entered() -> void:
+	#area_mause = true
+#
+#
+#func _on_area_2d_mouse_exited() -> void:
+	#area_mause = false
